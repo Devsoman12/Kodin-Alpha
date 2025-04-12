@@ -1,0 +1,106 @@
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.searchBarInput {
+    width: 100%;
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background: transparent;
+}
+
+.vectorIconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, transform 0.2s ease-in-out;
+}
+
+.vectorIconWrapper:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.vectorIcon {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 1024px) {
+    .searchbar {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .searchBarInput {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    .vectorIcon {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .searchbar {
+        max-width: 95%;
+        padding: 8px;
+        border-radius: 6px;
+    }
+
+    .searchBarInput {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .vectorIconWrapper {
+        padding: 6px;
+    }
+
+    .vectorIcon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .searchbar {
+        max-width: 100%;
+        padding: 6px;
+        border-radius: 5px;
+    }
+
+    .searchBarInput {
+        font-size: 13px;
+        padding: 5px;
+    }
+
+    .vectorIconWrapper {
+        padding: 5px;
+    }
+
+    .vectorIcon {
+        width: 18px;
+        height: 18px;
+    }
+}

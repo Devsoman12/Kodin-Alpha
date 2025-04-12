@@ -1,0 +1,330 @@
+.taskContainer {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow the container to wrap its children on small screens */
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center; /* Center content horizontally */
+}
+
+.taskdescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside */
+    justify-content: flex-start;
+    padding: 24px;
+    background: radial-gradient(120% 100% at 100% 20%, #bf5858, rgba(89, 89, 89, 0.49) 79%);
+    border-radius: 8px;
+    max-width: 800px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    flex-grow: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure it doesn't exceed the available space */
+    /*text-align: center; !* Center text inside *!*/
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 24px;
+    width: 300px;
+    max-height: 240px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    align-items: center; /* Center content inside */
+}
+
+/* Sidebar Header (non-scrollable) */
+.sidebarHeader {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #f0f0f0;
+    text-align: center; /* Center header text */
+}
+
+/* Content section with tasks */
+.sidebarContent {
+    flex-grow: 1; /* Allow the content to take remaining space */
+    overflow-y: auto; /* Make the content scrollable if it overflows */
+    max-height: calc(100% - 40px); /* Adjust height to account for header height */
+    padding-right: 8px; /* Add padding to ensure smooth scrolling */
+}
+
+/* Sidebar List Styling */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar li button {
+    background-color: #3c3c3c;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/*.sidebar li button:hover {*/
+/*    background-color: #555;*/
+/*}*/
+
+/* Author Info Section */
+.authorInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    justify-content: center; /* Center author info */
+}
+
+.authorTemplate {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center; /* Center content */
+}
+
+.authorAvatar {
+    width: 50px;
+    height: 50px;
+    background-color: #3c3c3c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+.avatarPlaceholder {
+    font-size: 20px;
+}
+
+.authorDetails {
+    font-size: 16px;
+}
+
+.authorName {
+    font-weight: bold;
+}
+
+.problemDetails {
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.problemTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.problemDescription {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #f0f0f0;
+    background-color: rgba(67, 67, 67, 0.7);
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: auto;
+
+    resize: vertical;
+    min-height: 200px;       /* Initial height like before */
+    height: 200px;
+    max-height: none;
+    border: 1px solid #ccc;  /* Optional: helps visually indicate it's resizable */
+    box-sizing: border-box;
+
+    width: 100%;  /* This will make the element take up the full width of its parent container */
+    min-width: 100%;  /* Prevent it from shrinking */
+}
+
+
+
+/* Action Buttons Section (Like, Add to Class, Train, Forbid) */
+.actionButtons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 24px;
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+    justify-content: center; /* Center action buttons */
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Forbid and Train Buttons */
+.forbidButton {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #a34344;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.trainButton {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #6ebf58;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.trainButton:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.forbidButton:hover {
+    background-color: #150202;
+}
+
+
+@media (max-width: 768px) {
+    .taskContainer {
+        align-items: center;
+        width: 80%;
+    }
+
+    .taskdescription {
+        padding: 16px;
+        max-width: 100%;
+    }
+
+    .sidebar {
+        margin-top: 20px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .sidebarHeader {
+        font-size: 12px;
+    }
+
+    .sidebar li button {
+        font-size: 10px;
+        padding: 10px 12px;
+    }
+
+    .actionButtons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .trainButton, .forbidButton {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .taskdescription {
+        padding: 12px;
+    }
+
+    .authorAvatar {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .authorName {
+        font-size: 12px;
+    }
+
+    .problemTitle {
+        font-size: 16px;
+    }
+
+    .problemDescription {
+        font-size: 10px;
+    }
+
+    .sidebarHeader {
+        font-size: 14px;
+    }
+
+    .sidebar li button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .trainButton, .forbidButton {
+        font-size: 14px;
+    }
+}
+
+
+/* Tooltip style */
+.icon[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 40px; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+/* Tooltip hidden by default */
+.icon[data-tooltip]::after {
+    opacity: 0;
+    visibility: hidden;
+}
+

@@ -1,0 +1,254 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.overlayContent {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 20px;
+    resize: none;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.closeButton:hover {
+    color: #000;
+}
+
+.title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.commentItem {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 2px solid #ccc;
+}
+
+.commentText {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.replyList {
+    margin-left: 20px;
+    margin-top: 10px;
+    border-left: 2px solid #ddd;
+    padding-left: 10px;
+}
+
+.commentInput,
+.replyInput {
+    display: flex;
+    gap: 10px;
+}
+
+.commentTextField,
+.replyTextField {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.commentButton,
+.replyButton {
+    padding: 8px 12px;
+    background-color: #5ddbdf;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.commentButton:hover,
+.replyButton:hover {
+    background-color: #44c3c9;
+}
+
+.commentHeader {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.author {
+    color: #333;
+}
+
+.votes {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+}
+
+.voteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+}
+
+.voteButton:hover {
+    color: #000;
+}
+
+.replyInput {
+    margin-top: 10px;
+}
+
+.replyTextField {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.actionsMenu {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.actionsMenu button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    font-size: 12px;
+}
+
+.actionsMenu button:hover {
+    color: #000;
+}
+
+.editInput {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+}
+
+.editTextField {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.saveButton {
+    padding: 8px 12px;
+    background-color: #5ddbdf;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.saveButton:hover {
+    background-color: #44c3c9;
+}
+
+
+.resizeHandle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    cursor: nwse-resize;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.resizeHandle:hover {
+    background: rgba(87, 68, 68, 0.1);
+}
+
+.commentInputRow {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 10px;
+
+}
+
+.commentButton {
+    padding: 8px 12px;
+    background-color: #5ddbdf;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.commentButton:hover {
+    background-color: #44c3c9;
+}
+
+.collapseButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.collapseButton:hover {
+    color: #007bff;
+}
+
+
+
+
+
+
+
+
+.commentList {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+.commentList {
+    flex: 1;
+    max-height: calc(100% - 100px);
+    margin-bottom: 10px;
+}

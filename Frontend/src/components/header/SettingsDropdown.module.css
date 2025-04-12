@@ -1,0 +1,40 @@
+.settingsDropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    border-radius: 8px;
+    background-color: #efefef;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    z-index: 10;
+}
+
+.dropdownOption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #d7a700;
+    padding: 8px 12px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid #000;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdownOption:hover {
+    background-color: #b38f00;
+    transform: scale(1.05);
+    color: white;
+}
+
+.dropdownOption:active {
+    transform: scale(0.98);
+}

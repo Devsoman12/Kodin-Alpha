@@ -1,0 +1,126 @@
+.forumContainer {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 20px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.column {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.postInput {
+    width: 91%;
+    height: 80px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.addPostButton {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #5ddbdf;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.addPostButton:hover {
+    background-color: #44c3c9;
+}
+
+.postList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.postItem {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.postContent {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.postFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commentCount {
+    font-size: 13px;
+    color: #777;
+}
+
+.commentButton {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.commentButton:hover {
+    text-decoration: underline;
+}
+
+.newsList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsItem {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.newsContent {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.newsDate {
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .forumContainer {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}

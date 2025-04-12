@@ -1,0 +1,139 @@
+.settingsContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: black;
+}
+
+.section {
+    margin-bottom: 25px;
+    padding: 18px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: black;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+select {
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+select:focus {
+    border-color: #d7a700;
+    outline: none;
+    background-color: #fff;
+}
+
+input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+}
+
+button {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.saveButton {
+    width: 100%;
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+}
+
+.saveButton:hover {
+    transform: scale(1.05);
+}
+
+.deleteButton {
+    width: 100%;
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+}
+
+.deleteButton:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .settingsContainer {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .formGroup {
+        margin-bottom: 12px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .settingsContainer {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .formGroup {
+        margin-bottom: 10px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 8px;
+    }
+}

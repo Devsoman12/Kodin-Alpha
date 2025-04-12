@@ -1,0 +1,138 @@
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+.contentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.icon {
+    width: 8vw;
+    height: auto;
+    max-width: 100px;
+    min-width: 60px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.7);
+}
+
+.hoverText {
+    font-size: 1rem;
+    color: #222;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    max-width: 20vw;
+    min-width: 150px;
+    width: auto;
+    word-break: break-word;
+    text-align: center;
+    line-height: 1.5;
+    position: relative;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.right .contentWrapper {
+    flex-direction: row-reverse;
+}
+
+.left .contentWrapper {
+    flex-direction: row;
+}
+
+.right:hover .button {
+    transform: translateX(2vw) scale(1.1);
+}
+
+.right:hover .hoverText {
+    transform: translateX(4vw);
+    opacity: 1;
+}
+
+.left:hover .button {
+    transform: translateX(-2vw) scale(1.1);
+}
+
+.left:hover .hoverText {
+    transform: translateX(-4vw);
+    opacity: 1;
+}
+
+.stacked-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 3vh;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .contentWrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hoverText {
+        max-width: 30vw;
+        font-size: 0.9rem;
+    }
+
+    .icon {
+        width: 12vw;
+    }
+
+    .button:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 480px) {
+    .hoverText {
+        max-width: 35vw;
+        text-align: center;
+        font-size: 0.85rem;
+    }
+
+    .icon {
+        width: 15vw;
+    }
+
+    .stacked-buttons-container {
+        height: auto;
+        gap: 20px;
+    }
+
+    .button {
+        padding: 8px;
+    }
+}

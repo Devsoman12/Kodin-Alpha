@@ -1,0 +1,90 @@
+.solutionTests {
+    justify-content: right;
+    width: 180px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.toggleButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    background: #ddd;
+    border-radius: 8px;
+}
+
+.arrow {
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.testResultsContainer {
+    justify-content: right;
+    width: 80%;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.progressWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progressBar {
+    width: 80%;
+    height: 12px;
+    background: #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: #4caf50;
+    transition: width 0.5s ease-in-out;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    gap: 5px;
+    text-align: left;
+    padding: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .solutionBox {
+        min-height: auto;
+    }
+
+    .testResultsContainer {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 80%;
+    }
+}

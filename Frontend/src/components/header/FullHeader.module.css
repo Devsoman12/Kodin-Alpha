@@ -1,0 +1,464 @@
+.headerContainer {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 40px 85px;
+	margin-bottom: -30px;
+	box-sizing: border-box;
+	gap: 10px;
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	font-family: Roboto, sans-serif;
+	height: auto;
+}
+
+
+.navSection {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center; /* Center the navbar content */
+	width: 100%;
+	position: relative; /* Make the navbar relative to position the panels */
+}
+
+
+.leftPanel, .rightPanel {
+	width: 39px; /* Small fixed width for the panels */
+	height: 40px; /* Height of the panels */
+	position: absolute; /* Absolute positioning inside the navbar */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 3px; /* Rounded corners */
+}
+
+
+.leftPanel {
+	left: 0; /* Position it on the left side of the navbar */
+	background-color: rgba(255, 0, 0, 0); /* Red background for the left panel */
+}
+
+.rightPanel {
+	right: 0; /* Position it on the right side of the navbar */
+	background-color: rgba(255, 0, 0, 0); /* Red background for the right panel */
+}
+.navbar {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center; /* Center navbar content */
+	align-items: center;
+	padding: 8px 22px;
+	border-radius: 8px;
+	background-color: #a54344;
+	box-shadow: 11px 4px 16.1px rgba(0, 0, 0, 0.25);
+	min-width: 200px;
+	max-width: 1750px;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative; /* Ensure the panels are inside the navbar */
+	border: black solid 1px;
+}
+
+.authContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	padding-right: 16px;
+}
+
+.authButtons {
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	align-items: center;
+}
+
+.signupButton, .loginButton {
+	width: 142px;
+	height: 33px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	overflow: hidden;
+	border-radius: 7px;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.signupButton:hover, .loginButton:hover {
+	transform: scale(1.05);
+}
+
+.signupButtonBackground, .loginButtonBackground {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 7px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+}
+
+.signupButtonBackground {
+	background-color: #d7a700;
+}
+
+.loginButtonBackground {
+	background-color: #a54344;
+}
+
+.buttonText {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	line-height: normal;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.userActionsContainer {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 10px;
+	color: #fff;
+}
+
+.honorAndProfile {
+	right: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 12px;
+}
+
+
+.pointsContainer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 40px;
+}
+
+
+.pointsBackground {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 16.5px;
+	background-color: #a54344;
+	width: 100%;
+	height: 100%;
+}
+
+.pointsDisplay {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+	padding: 0 10px;
+	z-index: 1;
+}
+
+.pointsIcon {
+	width: 24px;
+	height: 24px;
+}
+
+.pointsText {
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	line-height: 1;
+}
+
+.profileIcon {
+	width: 61px;
+	height: 61px;
+	cursor: pointer;
+	border-radius: 50%;
+	overflow: hidden;
+	object-fit: cover;
+}
+
+.logoIcon {
+	width: 149px;
+	height: 168px;
+	cursor: pointer;
+}
+
+
+
+.navbarContent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
+}
+
+.mainMenu {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.hamburgerButton {
+	width: 71px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: #d7a700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border: 1px solid #1e1e1e;
+	position: relative;
+}
+
+.hamburgerIcon {
+	width: 30px;
+	height: 36px;
+	align-items: center;
+	justify-content: center;
+	object-fit: contain;
+}
+
+.headerActions {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 16px;
+	justify-content: flex-end;
+	height: 100%;
+	padding-right: 16px;
+}
+
+.notificationsIcon {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+}
+
+.settingsDropdown {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	border-radius: 8px;
+	background-color: #efefef;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	z-index: 10;
+	padding: 10px;
+}
+
+.dropdownOption {
+	border-radius: 4px;
+	background-color: #d7a700;
+	padding: 5px 10px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.dropdownText {
+	font-size: 14px;
+	color: #fff;
+}
+
+.notifications {
+	border: 2px solid #1e1e1e;
+	border-radius: 3px;
+	left: 10px;
+	width: 32px;
+	height: 38px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin-right: 10px;
+	background-color: #d7a700;
+}
+
+.notifications.hover {
+	background-color: #d7a700;
+}
+
+.notificationsDropdown {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	z-index: 10;
+	width: 250px;
+}
+
+.notificationsDropdownOption {
+	padding: 8px 12px;
+	border-radius: 4px;
+	background-color: #f7f7f7;
+	cursor: pointer;
+	text-align: left;
+	font-size: 14px;
+}
+
+.notificationsDropdownOption:hover {
+	background-color: #d7a700;
+	color: #fff;
+}
+
+.settings {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.settingsButton {
+	border: 2px solid #1e1e1e;
+	width: 32px;
+	height: 38px;
+	border-radius: 3px;
+	background-color: #d7a700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.menuLink {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #d5a600;
+	color: #000000;
+	transition: transform 0.2s ease;
+}
+
+.menuLink:hover {
+	transform: scale(1.05);
+
+}
+
+.settingsIcon {
+	width: 32px;
+	height: 32px;
+}
+
+.menuInline {
+	display: flex;
+	gap: 16px;
+}
+
+@media (max-width: 768px) {
+	.headerContainer {
+		padding: 40px 30px;
+		height: auto;
+		text-align: center;
+		gap: 15px;
+	}
+
+	.authContainer {
+		padding-right: 8px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.signupButton, .loginButton {
+		width: 120px;
+		height: 30px;
+		font-size: 12px;
+	}
+
+	.navbar {
+		padding: 8px 2px;
+		min-width: 70px;
+		margin-top: 50px;
+	}
+
+	.hamburgerButton {
+		width: 60px;
+		height: 35px;
+		display: block;
+	}
+
+	.pointsContainer {
+		width: 120px;
+		height: 35px;
+	}
+
+	.pointsText {
+		font-size: 14px;
+
+	}
+
+	.headerActions {
+		gap: 8px;
+		margin-top: 50px;
+
+	}
+
+	.logoIcon {
+		width: 60px;
+		height: auto;
+		margin-top: 40px;
+
+	}
+
+	.menuInline {
+		display: none;
+	}
+	.profileIcon {
+		width: 41px;
+		height: 41px;
+
+	}
+}
+
+.notificationIndicator {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 10px;
+	background-color: red;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+

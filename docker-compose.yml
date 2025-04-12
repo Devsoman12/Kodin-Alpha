@@ -1,0 +1,61 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: DockerFile.Backend
+    container_name: kodin_backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    depends_on:
+      - pg_data
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run start:backend
+
+  frontend:
+    build:
+      context: ./Frontend  # Set context to Frontend directory
+      dockerfile: DockerFile.Frontend
+    container_name: kodin_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    working_dir: /app
+    volumes:
+      - ./Frontend:/app  # Mount only the Frontend directory
+      - /app/node_modules
+    command: npm start
+
+  pg_data:
+    image: kodin_db
+    container_name: kodin_db_v
+    restart: always
+    build:
+      context: ./db  # Make sure this path is correct
+      dockerfile: DockerFile.Database
+    ports:
+      - "5432:5432"
+    env_file: .env
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./db/dbCreate.sql:/docker-entrypoint-initdb.d/dbCreate.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -p $(POSTGRES_PORT) -U $(POSTGRES_USER) -d $(POSTGRES_DB)"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 0s
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: bemi1
+      POSTGRES_DB: TukeWars
+
+volumes:
+  pg_data:
+    name: "pg_data-v"

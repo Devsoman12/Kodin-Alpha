@@ -1,0 +1,142 @@
+.tabsTask {
+  width: 90%;
+  height: 380px;
+  max-width: 600px;
+  max-height: 380px;
+  position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.taskBackground {
+  background-color: #fffad1;
+}
+
+.solutionBackground {
+  background-color: #d8f5d8;
+}
+
+.testsBackground {
+  background-color: #dceaff;
+}
+
+.initialCodeBackground {
+  background-color: #ffdada;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.tabButton {
+  width: 130px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.inactiveTabYellow {
+  background-color: #ffeb80;
+}
+
+.inactiveTabGreen {
+  background-color: #89e489;
+}
+
+.inactiveTabBlue {
+  background-color: #a7c7ff;
+}
+
+.inactiveTabRed {
+  background-color: #ff8989;
+}
+
+.tabButton:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.activeTabYellow {
+  background-color: #ffdb00;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.activeTabGreen {
+  background-color: #54c854;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.activeTabBlue {
+  background-color: #2f8cff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.activeTabRed {
+  background-color: #ff5050;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.editorContainer {
+  flex-grow: 1;
+  width: 97%;
+  height: 1000px;
+  max-height: 1550px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+@media (max-width: 1024px) {
+  .tabsTask {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .tabButton {
+    font-size: 14px;
+    padding: 8px;
+    width: 120px;
+  }
+
+  .editorContainer {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    gap: 8px;
+  }
+
+  .tabButton {
+    width: 100px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .editorContainer {
+    max-height: 550px;
+  }
+}

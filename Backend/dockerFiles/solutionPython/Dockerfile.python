@@ -1,0 +1,30 @@
+# Use Python 3.8 as the base image
+FROM python:3.8-slim
+
+# Install necessary libraries
+RUN pip install --no-cache-dir pytest \
+    numpy \
+    pandas \
+    scipy \
+    sympy \
+    networkx \
+    requests \
+    Flask \
+    fastapi \
+    uvicorn \
+    aiohttp \
+    typing-extensions \
+    hypothesis \
+    black \
+    pylint \
+    mypy
+
+# Copy solution and test files
+COPY solutionPython/solution.py /usr/local/solution/solution.py
+COPY solutionPython/tests.py /usr/local/solution/tests.py
+
+# Set working directory
+WORKDIR /usr/local/solution
+
+# Default command for the container (just a placeholder)
+CMD ["bash"]

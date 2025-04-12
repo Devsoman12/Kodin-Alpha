@@ -1,0 +1,332 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlayContent {
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    max-width: 90%;
+    width: 400px;
+}
+
+.overlayHeader {
+    width: 242px;
+    height: 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.closeIcon {
+    width: 24px;
+    height: 24px;
+    color: #333;
+}
+
+.classList {
+    height: 150px;
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.classItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.classItem input {
+    margin-right: 8px;
+}
+
+.buttonRow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.timeSection {
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.timeContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.clockIcon {
+    margin-bottom: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.dateInputs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.dateInput {
+    width: 125px;
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #606060;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.timeInputs {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+.timeInput {
+    width: 120px;
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #606060;
+    border-radius: 4px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.saveButton {
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.saveButton:hover {
+    background: #388e3c;
+}
+
+.colorFont {
+    color: #000000;
+}
+
+.inputLabel {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.helperText {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.iconWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .overlayContent {
+        width: 80%;
+        max-height: 700px;
+
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .buttonRow {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .classList {
+        height: auto;
+        max-height: 200px;
+    }
+
+    .classItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dateInputs,
+    .timeInputs {
+        flex-direction: column;
+    }
+
+    .dateInput,
+    .timeInput {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .overlayContent {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .header {
+        align-items: flex-start;
+    }
+
+    .classList {
+        max-height: 250px;
+    }
+
+    .classItem {
+        font-size: 12px;
+    }
+
+    .dateInputs,
+    .timeInputs {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .dateInput,
+    .timeInput {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .saveButton {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlayContent {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header {
+        font-size: 14px;
+    }
+
+    .classList {
+        max-height: 150px;
+    }
+
+    .buttonRow {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .dateInput,
+    .timeInput {
+        font-size: 12px;
+    }
+
+    .saveButton {
+        padding: 6px 12px;
+    }
+}
+
+
+.overlay2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlayContent2 {
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    max-width: 90%;
+    max-height: 400px;
+}
+
+.overlayHeader2 {
+    width: 242px;
+    height: 100px;
+}
+
+
+@media (max-height: 768px) {
+    .overlay {
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    .overlay2{
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+}

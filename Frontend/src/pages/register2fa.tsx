@@ -1,0 +1,19 @@
+import { FunctionComponent } from 'react';
+import Content from '../components/verification/2fa';
+import Footer from '../components/footer/footer';
+import '../styles/global.css'; // Import the global styles
+
+
+
+const Register2fa: FunctionComponent = () => {
+  return (
+    <div className='content'>
+      {/* Main content section */}
+      <Content />
+      {/* Footer section */}
+      <Footer />
+    </div>
+  );
+};
+
+export default Register2fa;

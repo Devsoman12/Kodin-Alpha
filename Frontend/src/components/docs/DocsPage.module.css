@@ -1,0 +1,259 @@
+/* General page layout */
+.docsPage {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.headerSvg {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}
+
+.mainContainer {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 80px; /* Sidebar width when collapsed */
+}
+
+.sidebarToggle {
+    background-color: #616161;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    position: sticky;
+    top: 10px;
+    z-index: 10;
+}
+
+.sidebarToggle:hover {
+    background-color: #000000;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    margin-top: -20px;
+    position: relative;
+}
+
+.treeItem {
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+/*.treeItem:hover {*/
+/*    background-color: rgba(0, 0, 0, 0.05);*/
+/*}*/
+
+.treeItemTitle {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.treeChildren {
+    margin-left: 20px;
+    border-left: 2px solid #ddd;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    color: rgba(76, 76, 76, 0.79);
+}
+
+.treeChildren.collapsed {
+    margin-left: -20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    border-left: 2px solid #ddd;
+
+
+}
+
+.treeItem.selected {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Heading links in sidebar */
+.headingLink {
+    text-decoration: none;
+    color: #939393;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.headingLink:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/* Code syntax highlighting */
+pre[class*="language-"] {
+    background: #282c34;
+    color: white;
+    padding: 1em;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1em 0;
+    font-size: 14px;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+/* Scrollbar customization */
+.content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.content::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 220px;
+        padding: 10px;
+    }
+
+    .sidebar.collapsed {
+        width: 45px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .treeItemTitle {
+        font-size: 14px;
+    }
+
+    .sidebarToggle {
+        font-size: 12px;
+    }
+
+
+    .treeChildren {
+        margin-left: 15px;
+        padding-left: 8px;
+    }
+    table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 8px 12px;
+    }
+
+    .sidebarToggle {
+        font-size: 7px;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .headerSvg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .treeItemTitle {
+        font-size: 14px;
+    }
+
+}
+
+.sidebar.collapsed .treeItem  {
+    display: none;
+}

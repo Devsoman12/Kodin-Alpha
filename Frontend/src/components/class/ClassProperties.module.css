@@ -1,0 +1,119 @@
+.classProperties {
+    width: 20rem;
+    background-color: #fff;
+    border-radius: 0.6875rem;
+    padding: 1.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #000;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.editButton,
+.saveButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 0.3125rem;
+    background-color: #d7a700;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.editButton:hover,
+.saveButton:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.propertiesList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.propertyItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+    width: 90%;
+    transition: all 0.2s ease;
+}
+
+.propertyItem:hover {
+    background-color: rgba(215, 167, 0, 0.2);
+    border-color: #d7a700;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: black;
+    flex: 1;
+    text-align: center;
+}
+
+.input {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    border: 1px solid black;
+    border-radius: 0.3125rem;
+    flex: 2;
+    background-color: #fff;
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+.input:focus {
+    border-color: #d7a700;
+    outline: none;
+}
+
+.value {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #000;
+    flex: 2;
+    padding: 0.5rem;
+    border-radius: 0.3125rem;
+    border: 1px solid transparent;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.propertyItem.editing {
+    background-color: #fff7db;
+    border-color: #d7a700;
+}
+
+@media (max-width: 768px) {
+    .classProperties {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .input {
+        font-size: 0.75rem;
+        padding: 0.375rem;
+    }
+}

@@ -1,0 +1,178 @@
+.taskFormContainer {
+    width: 90%;
+    max-width: 500px;
+    background: #d9d9d9;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.inputField {
+    width: 90%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #606060;
+    font-size: 14px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+.dropdownContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+}
+
+.toggleRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.leftIcons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.addIcon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.clockContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.dateDisplay {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dateInput {
+    width: 100px;
+    padding: 4px 8px;
+    font-size: 12px;
+    border: 1px solid #606060;
+    border-radius: 4px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.rightToggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toggleSwitch {
+    width: 50px;
+    height: 25px;
+    background: #d9d9d9;
+    border-radius: 50px;
+    border: 1px solid #000;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.toggleSwitch.active {
+    background: #4caf50;
+}
+
+.toggleCircle {
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    transition: left 0.3s ease;
+}
+
+.toggleSwitch.active .toggleCircle {
+    left: 26px;
+}
+
+.tooltipWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.tooltipIcon {
+    width: 24px;
+    height: 24px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tooltipText {
+    visibility: hidden;
+    width: 180px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tooltipWrapper:hover .tooltipText {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .taskFormContainer {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .inputField {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .dropdownContainer {
+        width: 100%;
+    }
+
+    .toggleRow {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

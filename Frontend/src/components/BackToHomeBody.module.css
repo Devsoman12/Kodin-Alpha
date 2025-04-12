@@ -1,0 +1,100 @@
+.youSuccessfully {
+    margin: 0;
+    padding: 0; /* Remove extra padding */
+    line-height: 1.2; /* Proper line-height for text */
+}
+.youSuccessfullyCreatedContainer1 {
+    width: 100%;
+}
+.youSuccessfullyCreatedContainer {
+    width: 100%; /* Allow text container to adapt width */
+    position: relative;
+    letter-spacing: 0.1px;
+    line-height: 1.2; /* Adjust line height for better spacing */
+    text-align: center; /* Center text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Minimal gap between lines of text */
+    flex-shrink: 0;
+}
+.authButtonChild {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 7px;
+    background-color: #d7a700;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+.text {
+    position: relative; /* Change to relative to avoid unnecessary positioning */
+    line-height: 1; /* Tighter spacing within the button text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.authButton {
+    width: 142px;
+    position: relative;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.authButtonItem {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 7px;
+    background-color: #a54344;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+.authButton1 {
+    width: 142px;
+    position: relative;
+    height: 33px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+.auth {
+    display: flex;
+    flex-direction: row; /* Buttons in a horizontal row */
+    align-items: center;
+    justify-content: center; /* Center homePageButtons horizontally */
+    gap: 12px; /* Spacing between homePageButtons */
+    width: auto;
+    font-size: 16px;
+    margin-top: 16px; /* Add spacing between text and homePageButtons */
+}
+.backtohomebody {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack text and homePageButtons vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    padding: 0px 47px;
+    box-sizing: border-box;
+    gap: 16px; /* Smaller gap between text and homePageButtons */
+    text-align: center;
+    font-size: 66px; /* Font size for the main heading */
+    color: #000;
+    font-family: Roboto, sans-serif;
+}

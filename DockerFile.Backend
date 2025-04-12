@@ -1,0 +1,22 @@
+# Use official Node.js image
+FROM node:18-alpine 
+
+# Set working directory inside the container
+WORKDIR /back
+
+# Copy only package.json and package-lock.json
+COPY package.json package-lock.json ./
+
+# Copy only the Backend and uploads directories
+COPY Backend/ Backend/
+COPY uploads/ uploads/
+
+# Install dependencies
+RUN npm install 
+RUN npm install bcryptjs
+
+# Expose port for backend
+EXPOSE 5000
+
+# Start only the backend
+CMD ["npm", "run", "start:backend"]

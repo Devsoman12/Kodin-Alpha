@@ -1,0 +1,141 @@
+.taskwriter {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    background: linear-gradient(#300c00, #300c00), #fff;
+    font-size: 12px;
+    color: #fff;
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+
+.codeAndTerminal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    gap: 1px;
+    height: 100%;
+}
+
+.codeeditor2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    z-index: 0;
+    width: 100%;
+    height: calc(100vh - 150px);
+    max-height: 70vh;
+}
+
+.editorWrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.languageSelectorContainer {
+    max-width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.terminal {
+    width: 100%;
+    height: 30%;
+    background-color: rgba(15, 15, 15, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-family: 'Sometype Mono', monospace;
+    text-align: left;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.terminalContent {
+    flex: 1;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding: 10px;
+    white-space: pre;
+}
+
+.loadingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .codeAndTerminal {
+        flex: 1; /* Ensures it expands to take available space in the container */
+        display: flex;
+        flex-direction: column; /* Stacks the elements vertically */
+        justify-content: flex-start;
+        position: relative;
+        gap: 1px;
+        height: 100%;
+        box-sizing: border-box; /* Ensures padding and borders are included in the element's total size */
+
+        /* Add responsiveness to handle different screen sizes */
+        min-height: 200px; /* Prevents it from becoming too small on small screens */
+        padding: 10px; /* Adds space around the content to avoid sticking to edges */
+        overflow: hidden; /* Prevents overflowing content */
+    }
+}
+
+.countdownContainer {
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    z-index: 10;
+}
+
+
+.countdown {
+    background-color: rgba(255, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}

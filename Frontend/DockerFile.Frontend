@@ -1,0 +1,21 @@
+# Use Node.js image
+FROM node:18-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy package.json, package-lock.json, and tsconfig.json from the current directory
+COPY package.json package-lock.json tsconfig.json ./
+
+# Install dependencies
+RUN npm install
+RUN npm install axios
+
+# Copy only the contents of the Frontend directory (not the directory itself)
+COPY . . 
+
+# Expose frontend port
+EXPOSE 3000
+
+# Start frontend
+CMD ["npm", "start"]

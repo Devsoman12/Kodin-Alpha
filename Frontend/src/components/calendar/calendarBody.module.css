@@ -1,0 +1,311 @@
+.calendarbody {
+    left: 30px;
+    margin: 0 auto;
+    position: relative;
+    height: 831px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 6px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 12px;
+    color: #000;
+    font-family: Roboto;
+    top: 40px;
+    width: 70%;
+    min-width: 300px;
+    max-width: 1300px;
+
+    /*border: #ff0000 1px solid;*/
+
+}
+
+.time {
+    max-width: 50px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    letter-spacing: 0.1px;
+    line-height: 22px;
+    /*border: #05ff00 1px solid;*/
+    /*border: black 1px solid;*/
+
+}
+
+.classCellContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.classNamee {
+    max-width: 55px;
+    /*border: #05ff00 1px solid;*/
+    /*border: black 1px solid;*/
+
+}
+
+.timeRange {
+    width: 40px;
+    height: 31px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+
+}
+.timeRange1 {
+    width: 116px;
+    height: 31px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-left: -30px;
+    /*border: #2b6cb0 2px solid;*/
+}
+
+
+.intervals {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    max-height: 10px;
+
+}
+
+.day1 {
+    height: 100%;
+    width: 40%;
+    top: 0%;
+    left: 0%;
+    letter-spacing: 0.1px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    /*border: black 1px solid;*/
+
+}
+
+.newClassIcon {
+    width: 99.8px;
+    position: relative;
+    height: 99.8px;
+
+}
+
+.buttons {
+    position: sticky !important;
+    /*margin-left: 570px;*/
+    margin-left: 83%;
+    margin-top: -790px;
+    top: 0px;
+    right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.classCell {
+    width: 98px;
+    height: 99px;
+    /*position: relative;*/
+    box-shadow: 4px 4px 9.6px rgba(0, 0, 0, 0.25);
+    border-radius: 17px;
+    background-color: #8ec9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+
+    position: relative;
+    overflow: visible !important;
+    z-index: 1;
+
+}
+
+.classCell b {
+    font-size: clamp(10px, 0.5vw, 9px);
+    line-height: 1.0;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    text-align: left;
+    overflow: hidden;
+    display: flex;
+
+}
+
+
+.rozvrh {
+    width: calc(100% - 187.2px);
+    position: absolute;
+    margin: 0 auto;
+    right: 180.89px;
+    left: 6.31px;
+    height: 801px;
+    top: -20px;
+    z-index: 0;
+    /*border: #2b6cb0 2px solid;*/
+}
+
+.days {
+    position: absolute;
+    top: 50px;
+    left: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 48px;
+    /*border: black 1px solid;*/
+
+}
+
+.day {
+
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.authday {
+    width: 50px;
+    height: 30px;
+    z-index: 10;
+    position: sticky;
+    left: -1px;
+    margin-top: 50px;
+    color: #a44344;
+
+}
+.timesParent {
+
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 19.8px);
+    top: 0px;
+    right: 19.8px;
+    bottom: 0px;
+    left: 0px;
+    overflow: auto;
+
+}
+.times {
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 31px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 62px;
+}
+
+
+
+.tooltipContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -40%;
+    left: 50%;
+    margin-left: -67px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltipContainer:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .calendarbody {
+        width: 90%;
+        padding: 0px 15px;
+        font-size: 11px; /* Adjust font size */
+    }
+
+    .timeRange1 {
+        width: 103px;
+    }
+
+    .rozvrh {
+        width: calc(100% - 87.2px);
+    }
+
+    .time {
+        max-width: 45px;
+    }
+
+    .classCell {
+        width: 85px;
+        height: 85px;
+    }
+
+    .buttons {
+        position: sticky !important;
+        margin-left: 90%;
+
+    }
+    .newClassIcon {
+        width: 60px;
+        position: relative;
+        height: 60px;
+    }
+    .buttons:hover  {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 568px) {
+
+    .buttons {
+        position: sticky !important;
+        margin-left: 85%;
+
+    }
+
+}
+
+
+@media (max-width: 468px) {
+
+    .buttons {
+        position: sticky !important;
+        margin-left: 78%;
+
+    }
+
+}

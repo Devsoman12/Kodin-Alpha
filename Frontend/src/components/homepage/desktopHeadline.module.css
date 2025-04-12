@@ -1,0 +1,84 @@
+.imageAndPhrase {
+    width: 100%;
+    max-width: 857px;
+    max-height: 600px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Righteous', sans-serif;
+    background: none;
+    aspect-ratio: 16 / 6;
+}
+
+.imageAndPhrase::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background-image: url('../../assets/hammer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: darken;
+    z-index: 0;
+}
+
+.headline {
+    z-index: 1;
+    color: white;
+}
+
+.headline {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    font-size: 48px;
+    color: #000000;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
+    max-width: 40%;
+    z-index: 2;
+    text-align: right;
+    /* background: rgba(0, 0, 0, 0.4); Add a subtle background to improve readability */
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1324px) {
+    .headline {
+        font-size: 32px;
+        top: 5%;
+        right: 5%;
+    }
+}
+
+
+@media (max-width: 798px) {
+    .headline {
+        font-size: 18px;
+        top: 5%;
+        right: 5%;
+    }
+}
+
+@media (max-width: 498px) {
+    .headline {
+        font-size: 12px;
+        top: 5%;
+        right: 5%;
+    }
+}
+
+@media (max-width: 298px) {
+    .headline {
+        font-size: 7px;
+        top: 5%;
+        right: 5%;
+    }
+}

@@ -1,0 +1,65 @@
+.bugReportOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.bugReportContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bugReportContent h3 {
+    margin-bottom: 16px;
+}
+
+.bugReportTextarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+.bugReportActions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bugReportActions button {
+    background-color: #6ebf58;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.bugReportActions button:hover {
+    background-color: #5a9e4f;
+}
+
+.bugReportActions button:last-child {
+    background-color: #a34344;
+}
+
+.bugReportActions button:last-child:hover {
+    background-color: #9e2f2f;
+}
+

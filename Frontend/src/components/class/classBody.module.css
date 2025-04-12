@@ -1,0 +1,199 @@
+.trieda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1.75rem;
+    font-family: "Roboto", sans-serif;
+    color: #222;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem 1.25rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 5px;
+    z-index:1000;
+    gap: 1rem;
+
+}
+
+.timeInterval,
+.clock {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: black;
+}
+
+.mainContent {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+    max-width: 1200px;
+    gap: 1.25rem;
+    padding-bottom: 1.875rem;
+    align-items: center;
+
+}
+
+.leftSection,
+.centerSection,
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 5px;
+}
+
+.actionContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0;
+    border-top: 2px solid #222;
+}
+
+.buttonSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
+}
+
+.actionButton {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 10rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.actionButton:hover {
+    transform: scale(1.1);
+}
+
+.svgIcon {
+    width: 60%;
+    height: auto;
+    max-width: 8.125rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.actionButton:hover .svgIcon {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1184px) {
+    .trieda {
+        font-size: 1.5rem;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 0.625rem;
+        text-align: center;
+        padding: 0.625rem;
+    }
+
+    .mainContent {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .leftSection,
+    .centerSection,
+    .rightSection {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .actionButton {
+        width: 9.375rem;
+        height: 9.375rem;
+    }
+
+    .svgIcon {
+        max-width: 7.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .trieda {
+        font-size: 1.25rem;
+        gap: 1rem;
+    }
+
+    .header {
+        padding: 0.625rem;
+    }
+
+    .mainContent {
+        grid-template-columns: 1fr;
+        text-align: center;
+        width: 90%;
+    }
+
+    .filtersAndMainActions {
+        font-size: 1rem;
+    }
+
+    .buttonSection {
+        gap: 0.625rem;
+    }
+
+    .actionButton {
+        width: 8.75rem;
+        height: 8.75rem;
+    }
+
+    .svgIcon {
+        max-width: 6.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trieda {
+        font-size: 1.125rem;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mainContent {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        width: 120%;
+    }
+
+    .buttonSection {
+        gap: 0.5rem;
+    }
+
+    .actionButton {
+        width: 4.3rem;
+        height: 4.3rem;
+    }
+
+    .svgIcon {
+        max-width: 6.25rem;
+    }
+}

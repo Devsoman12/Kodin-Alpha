@@ -1,0 +1,205 @@
+.filterComponent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 80%;
+    max-width: 43.75rem;
+    padding: 1.25rem;
+    border: 1px solid black;
+    border-radius: 0.6875rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+}
+
+.searchAndDropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    width: 100%;
+}
+
+.results,
+.addedUsers {
+    width: 92%;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 18.75rem;
+    overflow-y: auto;
+}
+
+.searchDropdown {
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.3125rem 0;
+    max-height: 15.625rem;
+    overflow-y: auto;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    top: 100%;
+    left: 0;
+    z-index: 100;
+}
+
+.resultItem,
+.addedUserItem {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem; /* Space between checkbox and label */
+    padding: 0.625rem;
+    font-size: 0.875rem;
+    color: black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    text-align: left;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.resultItem input[type="checkbox"] {
+    flex-shrink: 0;
+    margin-left: 0;
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-right: 0.625rem; /* Add margin on the right for space between checkbox and label */
+}
+
+.resultItem label {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.resultItem:hover,
+.addedUserItem:hover {
+    background-color: rgba(215, 167, 0, 0.2);
+}
+
+.resultItem input[type="checkbox"] {
+    position: relative; /* Remove absolute positioning */
+}
+
+.resultItem:last-child,
+.addedUserItem:last-child {
+    border-bottom: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlayContent {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 0.3125rem;
+    width: 18.75rem;
+    text-align: center;
+}
+
+.confirmButton,
+.cancelButton {
+    margin-top: 0.625rem;
+    padding: 0.625rem;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.confirmButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cancelButton {
+    background-color: #f44336;
+    color: white;
+}
+
+.addButton {
+    background-color: #8dc7fd;
+    color: white;
+    padding: 0.625rem;
+    border: none;
+    cursor: pointer;
+    flex: 1;
+    margin-right: 0.625rem;
+}
+
+.searchAndDropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.searchBarRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .filterComponent {
+        padding: 1rem;
+        max-width: 90%;
+    }
+
+    .results,
+    .addedUsers {
+        max-height: 200px;
+    }
+
+    .resultItem,
+    .addedUserItem {
+        padding: 0.5rem;
+    }
+
+    .overlayContent {
+        width: 80%;
+    }
+
+    .addButton {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .filterComponent {
+        padding: 0.75rem;
+    }
+
+    .resultItem,
+    .addedUserItem {
+        padding: 0.375rem;
+        font-size: 0.75rem;
+    }
+
+    .overlayContent {
+        width: 90%;
+    }
+}

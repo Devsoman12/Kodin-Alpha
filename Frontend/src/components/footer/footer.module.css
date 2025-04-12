@@ -1,0 +1,244 @@
+.logoNoName {
+    width: 115px;
+    position: relative;
+    height: 111px;
+}
+.allYourDreams {
+    margin: 0;
+}
+.allYourDreamsContainer1 {
+    width: 100%;
+}
+.allYourDreamsContainer {
+    width: 235px;
+    position: relative;
+    letter-spacing: 0.1px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.logoslogan {
+    width: 384px;
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 27px;
+    font-family: Righteous;
+}
+.blasenblichSR {
+    flex: 1;
+    position: relative;
+    letter-spacing: 0.1px;
+    line-height: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    height: 57px;
+}
+.copyright {
+    width: 468.6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    font-size: 20px;
+}
+.text {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    letter-spacing: 0.1px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textDocs {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    letter-spacing: 0.1px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.footerSection {
+    width: 105px;
+    position: relative;
+    height: 20px;
+    margin-left: -6px;
+}
+.footerSection1 {
+    width: 92px;
+    position: relative;
+    height: 20px;
+    margin-left: -6px;
+}
+.footerSection2 {
+    width: 469px;
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.topLanguages1 {
+    position: relative;
+    letter-spacing: 0.1px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.language {
+    position: absolute;
+    width: 132.91%;
+    top: 0%;
+    left: 0%;
+    letter-spacing: 0.1px;
+    line-height: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.python {
+    width: 103px;
+    position: relative;
+    height: 20px;
+    font-weight: bold;
+}
+.python1 {
+    width: 103px;
+    position: relative;
+    height: 20px;
+    margin-left: -20px;
+
+}
+.pythonParent {
+    align-self: stretch;
+    height: 26px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 0px 1px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+.topLanguages {
+    width: 282px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 21px;
+    font-size: 40px;
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    height: 365px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 34px;
+    box-sizing: border-box;
+    max-height: 500px;
+    text-align: left;
+    font-size: 20px;
+    color: #000;
+    font-family: Roboto;
+}
+
+@media (max-width: 600px) {
+    .logoNoName {
+        width: 80px;
+        height: 80px;
+    }
+    .allYourDreamsContainer {
+        width: 100%;
+        font-size: 14px;
+    }
+    .logoslogan {
+        width: 100%;
+        gap: 15px;
+        font-size: 16px;
+    }
+    .blasenblichSR {
+        height: 45px;
+        font-size: 14px;
+    }
+    .copyright {
+        font-size: 14px;
+        width: 100%;
+    }
+    .footerSection2 {
+        font-size: 18px;
+        width: 100%;
+        justify-content: center;
+    }
+    .footer {
+        padding: 20px;
+        font-size: 14px;
+    }
+    .topLanguages {
+        font-size: 24px;
+        gap: 15px;
+    }
+    .language {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logoNoName {
+        width: 100px;
+        height: 100px;
+    }
+    .logoslogan {
+        width: 100%;
+        gap: 20px;
+        font-size: 18px;
+    }
+    .footer {
+        font-size: 16px;
+    }
+    .topLanguages {
+        font-size: 32px;
+        gap: 20px;
+    }
+    .language {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer {
+        font-size: 20px;
+    }
+    .topLanguages {
+        font-size: 40px;
+    }
+}
